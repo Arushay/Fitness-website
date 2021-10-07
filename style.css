@@ -1,0 +1,155 @@
+/* Fitness landing page  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('gym4.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px
+}
+header{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    position: relative;
+    font-size: 2em;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+header .navigation{
+    position: relative;
+    display: flex;
+}
+header .navigation li{
+    list-style: none;
+}
+header .navigation li a{
+    display: inline-block;
+    color: black;
+    margin-right: 40px;
+    text-decoration: none;
+}
+header .navigation li a:hover{
+    color: #f1c40f;
+}
+.contant{
+    max-width: 600px;
+}
+.contant .contantBx h2{
+    font-size: 2em;
+    color: black;
+    line-height: 1em;
+}
+.contant .contantBx p{
+    font-size: 1.1em;
+    color: black;
+    font-weight: 300;
+    margin: 20px 0;
+}
+.contant .contantBx a{
+    display: inline-block;
+    padding: 10px 30px;
+    background: #f1c40f;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.icons{
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+}
+.icons li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons li a{
+    display: inline-block;
+    position: relative;
+    margin-right: 20px;
+    transform: scale(0.5);
+    color: black;
+}
+@media (max-width: 991px) {
+    header{
+    padding: 15px 40px;
+    }
+    section{
+        padding: 40px;
+        background: url('gym4.jpg');
+        background-position: center;
+        background-size: cover;
+
+    }
+    .contant .contantBx h2{
+        font-size: 2.5em
+    }
+    .contant .contantBx p{
+        font-size: 1em
+    }
+    header .navigation{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0%;
+        bottom: 0;
+        background: #f1c40f;
+        z-index: 10;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    header .navigation.active{
+        display: flex;
+
+    }
+    header .navigation li a{
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .toggleMenu{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url('menu.png');
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 11;
+    }
+    .toggleMenu.active{
+        background: url('close.png');
+        background-position: center;
+        background-size: 25px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+}
